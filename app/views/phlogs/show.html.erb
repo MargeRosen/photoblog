@@ -6,14 +6,14 @@
 </p>
 
 <p>
-  <strong>Pic:</strong>
-  <%= @phlog.pic %>
+  <!strong><!Pic:</strong>
+  <%= image_tag(@phlog.pic_url, :width => 600) if @phlog.pic.present? %>
 </p>
 
-<p>
-  <strong>Pic processed:</strong>
-  <%= @phlog.pic_processed %>
-</p>
+<!p>
+  <!strong><!Pic processed:</strong>
+  <!%= @phlog.pic_processed %>
+<!/p>
 
 <p>
   <strong>Location:</strong>

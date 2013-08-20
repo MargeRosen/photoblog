@@ -5,7 +5,8 @@
     <tr>
       <th>Title</th>
       <th>Pic</th>
-      <th>Pic processed</th>
+     <! <th> <!Pic processed</th>
+      <th></th>
       <th>Location</th>
       <th>Description</th>
       <th></th>
@@ -18,8 +19,8 @@
     <% @phlogs.each do |phlog| %>
       <tr>
         <td><%= phlog.title %></td>
-        <td><%= phlog.pic %></td>
-        <td><%= phlog.pic_processed %></td>
+        <td><%= image_tag phlog.pic_url(:thumb) if phlog.pic? %></td>
+        <td><%#= phlog.pic_processed %></td>
         <td><%= phlog.location %></td>
         <td><%= phlog.description %></td>
         <td><%= link_to 'Show', phlog %></td>
