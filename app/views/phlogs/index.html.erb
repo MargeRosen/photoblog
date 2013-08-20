@@ -1,0 +1,35 @@
+<h1>Listing Photo Blogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Pic</th>
+      <th>Pic processed</th>
+      <th>Location</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phlogs.each do |phlog| %>
+      <tr>
+        <td><%= phlog.title %></td>
+        <td><%= phlog.pic %></td>
+        <td><%= phlog.pic_processed %></td>
+        <td><%= phlog.location %></td>
+        <td><%= phlog.description %></td>
+        <td><%= link_to 'Show', phlog %></td>
+        <td><%= link_to 'Edit', edit_phlog_path(phlog) %></td>
+        <td><%= link_to 'Destroy', phlog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Photo Blog', new_phlog_path %>
