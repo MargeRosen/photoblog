@@ -20,6 +20,10 @@
     <%= f.file_field :pic %>
   </div>
   <div class="field">
+    <%= f.label :remote_pic_url, "or pic URL" %><br>
+    <%= f.text_field :remote_pic_url %>
+  </div>
+  <div class="field">
     <%= f.label :pic_processed %><br>
     <%= f.check_box :pic_processed %>
   </div>

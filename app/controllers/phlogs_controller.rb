@@ -69,6 +69,6 @@ class PhlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def phlog_params
-      params.require(:phlog).permit(:title, :pic, :pic_processed, :location, :description)
+      params.require(:phlog).permit(:title, :pic, :remote_pic_url, :pic_processed, :location, :description)
     end
 end
